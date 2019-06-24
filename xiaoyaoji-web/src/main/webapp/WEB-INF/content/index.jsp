@@ -51,7 +51,7 @@
     </div>
 </section>
 <section class="m-sec-contact">
-    <ul class="cb mc">
+  <!--   <ul class="cb mc">
         <li>
             <p><i class="iconfont icon-qqqun"></i></p>
             <p>群:<a href="//shang.qq.com/wpa/qunwpa?idkey=3ef7d12c9bd722026c6a61318335246216421cd6a6851b0e8e3916dac297b3e7">336075459</a> </p>
@@ -65,7 +65,7 @@
             <p><a href="mailto:xiaoyaoji@zhoujingjie.cn">xiaoyaoji@zhoujingjie.cn</a> </p>
         </li>
 
-    </ul>
+    </ul> -->
 </section>
 </div>
 <br/>

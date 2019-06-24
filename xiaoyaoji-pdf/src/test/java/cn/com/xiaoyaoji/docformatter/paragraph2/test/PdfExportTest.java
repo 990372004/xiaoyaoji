@@ -70,12 +70,12 @@ public class PdfExportTest {
         data.add("支持http、websocket测试");
         data.add("支持json，xml，txt，jsonp等测试");
         data.add("支持form-data，x-www-form-urlencoded ，raw，binary 上传格式");
-        data.add("支持rest地址，http://www.test.com/test/{id}.json 这样的地址会自动替换id");
+//        data.add("支持rest地址，http://www.test.com/test/{id}.json 这样的地址会自动替换id");
         data.add("由于浏览器跨域访问限制，为了更好的体验服务，请下载安装扩展 https://chrome.google.com/webstore/detail/%E5%B0%8F%E5%B9%BA%E9%B8%A1/omohfhadnbkakganodaofplinheljnbd");
         data.add("如果在使用过程中发现界面排版错误，请切换至chrome最新版本浏览器。其他浏览器，其他浏览器正在适配中。");
         data.add("如果配置了地址前缀，则该模块下所有url访问时会自动带上前缀。");
-        data.add("如果有任何建议或意见都可以在这儿留言 http://www.xiaoyaoji.com.cn/help.html");
-        data.add("有任何bug 都可以在这儿提出来 http://git.oschina.net/zhoujingjie/apiManager/issues");
+//        data.add("如果有任何建议或意见都可以在这儿留言 http://www.xiaoyaoji.com.cn/help.html");
+//        data.add("有任何bug 都可以在这儿提出来 http://git.oschina.net/zhoujingjie/apiManager/issues");
         data.add("支持markdown编辑器");
         data.add("支持mock");
         data.add("支持变量");
@@ -96,7 +96,7 @@ public class PdfExportTest {
         NormalContent content = new NormalContent();
         Map<String, String> data = new LinkedHashMap<String, String>();
         data.put("请求类型", "HTTP");
-        data.put("接口地址", "http://www.xiaoyaoji.com.cn/test/json/3.json");
+//        data.put("接口地址", "http://www.xiaoyaoji.com.cn/test/json/3.json");
         data.put("请求方式", "GET");
         data.put("数据类型", "X-WWW-FORM-URLENCODED");
         data.put("响应类型", "JSON");
