@@ -16,7 +16,7 @@ public class TestEmail {
     }
     @Test
    public void testFindpassword(){
-        EMailUtils.findPassword("123123","");
+        EMailUtils.findPassword("123123","", null);
         System.out.println("ok");
     }
 
