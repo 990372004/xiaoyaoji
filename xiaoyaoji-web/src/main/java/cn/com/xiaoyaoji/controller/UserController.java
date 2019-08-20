@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author zhoujingjie
  * @date 2016-05-31
@@ -98,7 +100,7 @@ public class UserController {
      */
     @Ignore
     @PostMapping("findpassword")
-    public Object findPassword(@RequestParam String email) {
+    public Object findPassword(@RequestParam String email,HttpServletRequest request) {
         AssertUtils.notNull(email, "邮箱为空");
         AssertUtils.isTrue(StringUtils.isEmail(email), "邮箱格式错误");
         AssertUtils.isTrue(ServiceFactory.instance().checkEmailExists(email), "邮箱不存在");
@@ -109,7 +111,7 @@ public class UserController {
         fp.setId(StringUtils.id());
         int rs = DataFactory.instance().insert(fp);
         AssertUtils.isTrue(rs > 0, "操作失败");
-        EMailUtils.findPassword(fp.getId(), email);
+        EMailUtils.findPassword(fp.getId(), email,request);
         return rs;
     }
 

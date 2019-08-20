@@ -1,6 +1,10 @@
 package cn.com.xiaoyaoji.extension.email;
 
 import cn.com.xiaoyaoji.core.util.ConfigUtils;
+import cn.com.xiaoyaoji.utils.WebHttpUtils;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
 
@@ -24,8 +28,8 @@ public class EMailUtils {
         provider.sendCaptcha(code,to);
     }
 
-    public static void findPassword(String id, String to) {
-        String findpasswordURL = ConfigUtils.getProperty("xyj.findpassword.url");
+    public static void findPassword(String id, String to,HttpServletRequest request) {
+        String findpasswordURL = WebHttpUtils.getUrl(request)+ConfigUtils.getProperty("xyj.findpassword.url");
         String findPageURL = findpasswordURL+"?token=" + Base64.encodeBase64String((id + "!" + to).getBytes());
         provider.findPassword(findPageURL,to);
     }
