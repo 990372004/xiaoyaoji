@@ -25,7 +25,7 @@ public class JdbcUtils {
         ds.setMaxActive(100);
         ds.setMinIdle(Integer.parseInt(ConfigUtils.getJdbcMinIdle()));
         ds.setTimeBetweenEvictionRunsMillis(10000);
-        ds.setValidationQuery("select 'x'");
+        ds.setValidationQuery("select 1 from dual");
         ds.setPoolPreparedStatements(true);
         try {
             ds.setFilters("stat");
